@@ -4,24 +4,38 @@ draft: true
 title: 'Git'
 ---
 
+Git is a distributed version control system that tracks versions of files. Its main design goals are to be fast, ensure data integrity, and support complex workflows with many branches working simultaneously across different computers. Unlike traditional client-server systems, Git keeps a complete copy of the entire repository, including its history, on each user's local machine. This allows users to work offline and independently track changes without relying on a central server.
+
+---
+
+Create a new Git repository in the current directory.
+
 ```sh
 git init
 ```
 
+Create a new Git repository in the current directory and set the default branch to a given name.
+
 ```sh
-git init -b <branch>
+git init -b $BRANCH_NAME
 ```
+
+Create a new Git repository in the current directory without a working directory.
 
 ```sh
 git init --bare
 ```
 
-```sh
-git init --bare <path>
-```
+Create a new Git repository in the given directory without a working directory.
 
 ```sh
-git init --bare -b <branch>
+git init --bare $REPO_PATH
+```
+
+Create a new Git repository in the current directory without a working directory and set the default branch to a given name.
+
+```sh
+git init --bare -b $BRANCH_NAME
 ```
 
 ```sh
@@ -33,11 +47,11 @@ git remote -v
 ```
 
 ```sh
-git remote add <remote_alias> <remote_url>
+git remote add $REMOTE_ALIAS $REMOTE_URL
 ```
 
 ```sh
-git remote set-url <remote_alias> <remote_url>
+git remote set-url $REMOTE_ALIAS $REMOTE_URL
 ```
 
 ```sh
@@ -45,15 +59,15 @@ git status
 ```
 
 ```sh
-git add <filepath>
+git add $FILE
 ```
 
 ```sh
-git add -u <filepath>
+git add -u $FILE
 ```
 
 ```sh
-git commit -m "<message>"
+git commit -m "$MESSAGE"
 ```
 
 ```sh
@@ -61,15 +75,15 @@ git commit --ammed
 ```
 
 ```sh
-git push <remote_alias> <branch>
+git push $REMOTE_ALIAS $BRANCH_NAME
 ```
 
 ```sh
-git push -u <remote_alias> <branch>
+git push -u $REMOTE_ALIAS $BRANCH_NAME
 ```
 
 ```sh
-git push -f <remote_alias> <branch>
+git push -f $REMOTE_ALIAS $BRANCH_NAME
 ```
 
 ```sh
@@ -85,7 +99,7 @@ git pull
 ```
 
 ```sh
-git pull <remote_alias> <branch>
+git pull $REMOTE_ALIAS $BRANCH_NAME
 ```
 
 ```sh
@@ -97,19 +111,19 @@ git merge
 ```
 
 ```sh
-git clone <remote>
+git clone $REMOTE_URL
 ```
 
 ```sh
-git clone --depth 1 <remote>
+git clone --depth 1 $REMOTE_URL
 ```
 
 ```sh
-git branch -M <branch>
+git branch -M $BRANCH_NAME
 ```
 
 ```sh
-git reset <filepath>
+git reset $FILE
 ```
 
 ```sh
@@ -121,7 +135,7 @@ git reset --hard HEAD^
 ```
 
 ```sh
-git restore <filepath>
+git restore $FILE
 ```
 
 ```sh
@@ -129,7 +143,7 @@ git restore --staged
 ```
 
 ```sh
-git restore --staged <filepath>
+git restore --staged $FILE
 ```
 
 ```sh
@@ -145,7 +159,7 @@ git log --oneline
 ```
 
 ```sh
-git revert <commit> --no-edit
+git revert $COMMIT --no-edit
 ```
 
 ```sh
@@ -169,29 +183,29 @@ git config --global pull.rebase false
 ```
 
 ```sh
-git config --global user.name <name>
+git config --global user.name $NAME
 ```
 
 ```sh
-git config --global user.email <mail>
+git config --global user.email $EMAIL
 ```
 
 ```sh
-git config --global init.defaultBranch <branch>
+git config --global init.defaultBranch $BRANCH_NAME
 ```
 
 ```sh
-git apply <patch>
+git apply $PATCH
 ```
 
 ```sh
-git checkout <branch>
+git checkout $BRANCH_NAME
 ```
 
 ```sh
-git rm --cached <filepath>
+git rm --cached $FILE
 ```
 
 ```sh
-git submodule add <remote> <destination>
+git submodule add $REMOTE_URL $DESTINATION
 ```
