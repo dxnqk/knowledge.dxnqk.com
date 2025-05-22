@@ -1,6 +1,5 @@
 ---
 date: '2025-05-21T22:57:47+02:00'
-draft: true
 title: 'Stow'
 ---
 
