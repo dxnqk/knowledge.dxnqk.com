@@ -209,3 +209,11 @@ git rm --cached $FILE
 ```sh
 git submodule add $REMOTE_URL $DESTINATION
 ```
+
+```sh
+git submodule update --remote --merge
+```
+
+```sh
+git submodule update --init --recursive
+```
