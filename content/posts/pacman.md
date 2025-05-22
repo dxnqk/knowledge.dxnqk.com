@@ -5,6 +5,8 @@ title: 'Pacman'
 
 Pacman is a package management utility for Linux that handles software installation, updates, and removal. It uses compressed package files for efficient storage and maintains a text-based database to track installed packages, allowing for manual adjustments when needed.
 
+---
+
 Install package
 
 ```sh
