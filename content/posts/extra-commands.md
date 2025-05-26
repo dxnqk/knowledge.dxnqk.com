@@ -275,3 +275,13 @@ free -h
 ```sh
 lsusb
 ```
+
+Change directory to the directory where the script is.
+
+```sh
+cd "$(dirname "$0")"
+```
+
+```sh
+sudo netstat -tunlp
+```
