@@ -1,7 +1,7 @@
 ---
-date: '2025-05-22T14:57:51+02:00'
+date: "2025-05-22T14:57:51+02:00"
 draft: true
-title: 'Git'
+title: "Git"
 ---
 
 Git is a distributed version control system that tracks versions of files. Its main design goals are to be fast, ensure data integrity, and support complex workflows with many branches working simultaneously across different computers. Unlike traditional client-server systems, Git keeps a complete copy of the entire repository, including its history, on each user's local machine. This allows users to work offline and independently track changes without relying on a central server.

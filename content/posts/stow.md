@@ -1,6 +1,6 @@
 ---
-date: '2025-05-21T22:57:47+02:00'
-title: 'Stow'
+date: "2025-05-21T22:57:47+02:00"
+title: "Stow"
 ---
 
 Stow is a symlink management tool that organizes multiple software or data packages stored in different directories. It creates symbolic links so that these packages appear to be installed in a single, unified directory.

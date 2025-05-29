@@ -1,14 +1,14 @@
 ---
-date: '2025-05-24T14:15:24+02:00'
+date: "2025-05-24T14:15:24+02:00"
 draft: true
-title: 'Extra Commands'
+title: "Extra Commands"
 ---
 
 Some useful commands.
 
 ---
 
-Allow a permitted user to edit a file as another user using the default editor while ensuring that the editing process is secure. 
+Allow a permitted user to edit a file as another user using the default editor while ensuring that the editing process is secure.
 
 ```sh
 sudoedit $FILE_PATH

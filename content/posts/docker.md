@@ -1,7 +1,7 @@
 ---
-date: '2025-05-22T18:31:09+02:00'
+date: "2025-05-22T18:31:09+02:00"
 draft: true
-title: 'Docker'
+title: "Docker"
 ---
 
 Docker is an open-source platform that allows you to create, deploy, and run applications inside lightweight, isolated containers. A container packages your application along with all its dependencies, ensuring it runs consistently across different environments. Containers are portable and resource-efficient, as they share the host system's kernel but remain isolated from each other and the underlying infrastructure. You can run a Docker image as a container on any machine with Docker installed, regardless of the underlying operating system.

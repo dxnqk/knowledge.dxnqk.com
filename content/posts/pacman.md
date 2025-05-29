@@ -1,6 +1,6 @@
 ---
-date: '2025-05-21T22:57:16+02:00'
-title: 'Pacman'
+date: "2025-05-21T22:57:16+02:00"
+title: "Pacman"
 ---
 
 Pacman is a package management utility for Linux that handles software installation, updates, and removal. It uses compressed package files for efficient storage and maintains a text-based database to track installed packages, allowing for manual adjustments when needed.
@@ -19,7 +19,7 @@ Install packages from file
 sudo pacman -S - < $FILE_PATH
 ```
 
-Install packages from file that are not already installed and without confirmation 
+Install packages from file that are not already installed and without confirmation
 
 ```sh
 sudo pacman -S --noconfirm --needed - < $FILE_PATH
