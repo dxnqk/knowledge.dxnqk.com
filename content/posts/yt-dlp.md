@@ -92,3 +92,40 @@ yt-dlp --list-formats $URL
 ```sh
 yt-dlp -f "bestaudio[ext=m4a]" --output "%(id)s.%(ext)s" --paths $OUTPUT_PATH $URL
 ```
+
+## Boilerplates
+
+```sh
+yt-dlp \
+    -i \
+    -x \
+    -P /tmp \
+    -o "%(title)s.%(ext)s" \
+    --quiet \
+    --progress \
+    --no-warnings \
+    --restrict-filename \
+    --download-archive /tmp/archive.txt \
+    "https://www.youtube.com/playlist?list=$PLAYLIST_ID"
+```
+
+```sh
+yt-dlp \
+    -i \
+    -f 303 \
+    -P /tmp \
+    -o "%(title)s.%(ext)s" \
+    --quiet \
+    --progress \
+    --no-warnings \
+    --restrict-filename \
+    "https://www.youtube.com/watch?v=$VIDEO_ID"
+```
+
+```sh
+yt-dlp \
+    --quiet \
+    --simulate \
+    --no-warnings \
+    "$URL"
+```
