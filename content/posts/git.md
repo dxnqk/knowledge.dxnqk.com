@@ -217,3 +217,43 @@ git submodule update --remote --merge
 ```sh
 git submodule update --init --recursive
 ```
+
+## Commit Template
+
+```
+<Type>[Scope Optional]: <Description>
+
+[Body Optional]
+
+[Footer(s) Optional]
+```
+
+### Types
+
+| Type     | Description                                                                                                                                |
+| -------- | ------------------------------------------------------------------------------------------------------------------------------------------ |
+| Feat     | A new feature is introduced with the changes                                                                                               |
+| Fix      | A bug fix has occurred                                                                                                                     |
+| Chore    | Changes that do not relate to a fix or feature and don't modify src or test files (for example updating dependencies)                      |
+| Refactor | Refactored code that neither fixes a bug nor adds a feature                                                                                |
+| Docs     | Updates to documentation such as a the README or other markdown files                                                                      |
+| Style    | Changes that do not affect the meaning of the code, likely related to code formatting such as white-space, missing semi-colons, and so on. |
+| Test     | Including new or correcting previous tests                                                                                                 |
+| Perf     | Performance improvements                                                                                                                   |
+| CI       | Continuous integration related                                                                                                             |
+| Build    | Changes that affect the build system or external dependencies                                                                              |
+| Revert   | Reverts a previous commit                                                                                                                  |
+
+## Gitignore Examples
+
+```
+assets
+node_modules
+static
+tmp
+
+*_templ.go
+*_templ.txt
+
+.env
+```
