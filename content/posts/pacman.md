@@ -84,3 +84,136 @@ Search package from command
 ```sh
 pacman -F $COMMAND
 ```
+
+## Pacman packages to remember
+
+- alacritty
+- alsa-utils
+- base
+- base-devel
+- bat
+- bc
+- bind
+- bitwarden
+- blueman
+- bluez-utils
+- chromium
+- composer
+- dash
+- docker
+- docker-buildx
+- docker-compose
+- exfat-utils
+- eza
+- fd
+- ffmpegthumbnailer
+- figlet
+- firefox
+- foot
+- fzf
+- gammastep
+- git
+- gnu-netcat
+- go
+- grim
+- htop
+- hugo
+- hypridle
+- hyprland
+- hyprlock
+- hyprpaper
+- imagemagick
+- imv
+- inetutils
+- jq
+- keepassxc
+- lf
+- libappindicator-gtk3
+- libnotify
+- libpqxx
+- mako
+- man-db
+- man-pages
+- mariadb
+- mediainfo
+- mpv
+- neovim
+- nethogs
+- net-tools
+- network-manager-applet
+- nginx
+- nmap
+- nodejs
+- noto-fonts-emoji
+- npm
+- nwg-look
+- openssh
+- pcmanfm
+- perl-image-exiftool
+- php
+- php-fpm
+- php-sqlite
+- plocate
+- podman
+- podman-compose
+- poppler
+- rclone
+- restic
+- ripgrep
+- rofi
+- rofi-wayland
+- rsync
+- rustup
+- slurp
+- speedtest-cli
+- stow
+- sway
+- tcpdump
+- tmux
+- tree
+- ttf-baekmuk
+- ttf-font-awesome
+- ttf-iosevka-nerd
+- ttf-jetbrains-mono-nerd
+- ttf-nerd-fonts-symbols
+- udiskie
+- ufw
+- unarchiver
+- unzip
+- usbutils
+- waybar
+- wev
+- wget
+- whois
+- wl-clipboard
+- wofi
+- wtype
+- xclip
+- xdg-desktop-portal-hyprland
+- xdg-user-dirs
+- yazi
+- yt-dlp
+- zathura
+- zathura-pdf-mupdf
+- zed
+- zip
+- zsh
+
+## Install AUR Helper (YAY)
+
+```sh
+git clone https://aur.archlinux.org/yay-bin.git
+cd yay-bin
+makepkg -si
+```
+
+## AUR packages to remember
+
+- air-bin
+- backrest
+- brave-bin
+- mullvad-browser-bin
+- tailwindcss-bin
+- ttf-apple-emoji
+- watchman-bin
+- zen-browser-bin
