@@ -203,3 +203,67 @@ docker create --name $CONTAINER_NAME $DOCKER_IMAGE:$TARGET
 ```sh
 docker export $CONTAINER_NAME | tar t
 ```
+
+## Dockerfile Examples
+
+```docker
+ARG GO_VERSION=1.22.4
+ARG GO_BINARY=main
+ARG ALPINE_VERSION=3.20
+ARG PORT=8000
+
+FROM golang:${GO_VERSION}-alpine${ALPINE_VERSION} as builder
+
+RUN apk add gcc musl-dev sqlite
+
+WORKDIR /builder
+
+COPY . .
+
+RUN CGO_ENABLED=1 GOOS=linux GOARCH=amd64 go build -ldflags="-w -s" -installsuffix cgo -o ${GO_BINARY} .
+
+FROM alpine:${ALPINE_VERSION}
+
+RUN apk add yt-dlp ffmpeg
+
+COPY --from=builder /builder/${GO_BINARY} /usr/bin
+
+EXPOSE ${PORT}
+
+ENTRYPOINT [ ${GO_BINARY} ]
+```
+
+## Docker compose Examples
+
+```yaml
+services:
+  app:
+    build:
+      context: .
+    tty: true
+    depends_on:
+      - psql
+
+  psql:
+    container_name: postgres-example
+    image: postgres:alpine
+    restart: always
+    environment:
+      POSTGRES_USER: ${POSTGRES_USER}
+      POSTGRES_PASSWORD: ${POSTGRES_PASSWORD}
+      POSTGRES_DB: ${POSTGRES_DBNAME}
+    networks:
+      - example
+    ports:
+      - ${POSTGRES_PORT}:5432
+    volumes:
+      - psql-volume:/var/lib/postgresql/data
+
+networks:
+  example:
+    name: example
+    driver: bridge
+
+volumes:
+  psql-volume:
+```
